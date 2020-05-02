@@ -1,28 +1,77 @@
-//Current day variable
-var currentDay = moment().format('MMMM Do YYYY, h:mm:ss a');
-    $('#currentDay').append(currentDay);
 
-//Function for the past (gray)
-var hours = date("H");
+$(document).ready(function () {
+    $("#btn9am").on("click", function () {
+        var value = $(".description9am").val();
+        localStorage.setItem("#btn9am", value)
+    
+    });
+        $("#btn10am").on("click", function () {
+            var value = $(".description10am").val();
+            localStorage.setItem("#btn10am", value);
+    });
 
-if (currentDay < "") {
-    document.body.style.backgroundColor = "#d3d3d3";
-} else if (currentDay > "") {
-    document.body.style.backgroundColor = "#77dd77";
-} else {
-    document.body.style.backgroundColor = "#ff6961";
-}
+        $("#btn11am").on("click", function () {
+        var value = $(".description11am").val();
+        localStorage.setItem("#btn11am", value);
+    });
 
+        $("#btn12pm").on("click", function () {
+        var value = $(".description").val();
+        localStorage.setItem("#btn12pm", value);
+    });
+        
+        $("#btn1pm").on("click", function () {
+        var value = $(".description").val();
+        localStorage.setItem("#btn1pm", value);
+    });
+        
+        $("#btn2pm").on("click", function () {
+        var value = $(".description").val();
+        localStorage.setItem("#btn2pm", value);
+    });
 
-//NOT FINISHED Local Storage saving of input info
-var input = localStorage.getItem("textarea");
+        $("#btn3pm").on("click", function () {
+        var value = $(".description").val();
+        localStorage.setItem("#btn3pm", value);
+    });
 
-addButton.addEventListener("click", function() {
+        $("#btn4pm").on("click", function () {
+        var value = $(".description").val();
+        localStorage.setItem("#btn4pm", value);
+    });
 
-  localStorage.setItem("count", count);
-});
+        $("#btn5pm").on("click", function () {
+        var value = $(".description").val();
+        localStorage.setItem("#btn5pm", value);
+    });
 
-subtractButton.addEventListener("click", function() {
+    //Function for the past, present, future
+    function hourUpdate() {
+        var currentDay = moment().format('h');
+        console.log(currentDay);
+        $('#currentDay').append(currentDay);
 
-  localStorage.setItem("count", count);
+        var hours = 
+
+        if (currentDay < 9am) {
+            $(this).addClass("past");
+        } else if (hours > currentDay) {
+            $(this).addClass("future");
+        } else {
+            $(this).addClass("present");
+        }
+    };
+    hourUpdate();
+
+    // localStorage.getItem("#btn9am", value);
+    // localStorage.getItem("#btn10am", value);
+    // localStorage.getItem("#btn11am", value);
+    // localStorage.setItem("#btn12pm", value);
+    // localStorage.setItem("#btn1pm", value);
+    // localStorage.setItem("#btn2pm", value);
+    // localStorage.setItem("#btn3pm", value);
+    // localStorage.setItem("#btn4pm", value);
+    // localStorage.setItem("#btn5pm", value);
+
+    $(".description9am").val(localStorage.getItem("#btn9am"));
 });

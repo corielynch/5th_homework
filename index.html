@@ -29,7 +29,6 @@
   <body>
 
 <!-- Header -->
-
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
@@ -37,24 +36,24 @@
     </header>
     <div class="container">
 
-      <!-- Timeblocks go here -->
-      <table id="currentDay" class="table table-bordered table-light">
+<!-- Timeblocks go here -->
+      <table class="table table-bordered table-light" id="9am">
         <tbody>
           <tr>
             <th scope="row">09:00</th>
-            <td colspan="2"><form>
-              <input class="textarea" id="9am" />
+            <td colspan="2 past"><form>
+              <input class="description9am" id="9am" />
             </form></td>
             <td colspan="1"><button id="btn9am" class="saveBtn"></button></td>
           </tr>
         </tbody>
       </table>
-      <table class="table table-bordered table-light">
+      <table class="table table-bordered table-light" id="10am">
         <tbody>
           <tr>
             <th scope="row">10:00</th>
             <td colspan="2"><form>
-              <input class= "textarea" id="10am" />
+              <input class= "description10am" id="10am" />
             </form></td>
             <td colspan="1"><button id="btn10am" class="saveBtn"></button></td>
           </tr>
@@ -65,7 +64,7 @@
           <tr>
             <th scope="row">11:00</th>
             <td colspan="2"><form>
-              <input class= "textarea" id="11am" />
+              <input class= "description11am" id="11am" />
             </form></td>
             <td colspan="1"><button id="btn11am" class="saveBtn"></button></td>
           </tr>
@@ -76,7 +75,7 @@
           <tr>
             <th scope="row">12:00</th>
             <td colspan="2"><form>
-              <input class= "textarea" id="12pm" />
+              <input class= "description12pm" id="12pm" />
             </form></td>
             <td colspan="1"><button id="btn12pm" class="saveBtn"></button></td>
           </tr>
@@ -87,7 +86,7 @@
           <tr>
             <th scope="row">13:00</th>
             <td colspan="2"><form>
-              <input class= "textarea" id="1pm" />
+              <input class= "description1pm" id="1pm" />
             </form></td>
             <td colspan="1"><button id="btn1pm" class="saveBtn"></button></td>
           </tr>
@@ -98,7 +97,7 @@
           <tr>
             <th scope="row">14:00</th>
             <td colspan="2"><form>
-              <input class= "textarea" id="2pm" />
+              <input class= "description2pm" id="2pm" />
             </form></td>
             <td colspan="1"><button id="btn2pm" class="saveBtn"></button></td>
           </tr>
@@ -109,7 +108,7 @@
           <tr>
             <th scope="row">15:00</th>
             <td colspan="2"><form>
-              <input class= "textarea" id="3pm" />
+              <input class= "description3pm" id="3pm" />
             </form></td>
             <td colspan="1"><button id="btn3pm" class="saveBtn"></button></td>
           </tr>
@@ -120,7 +119,7 @@
           <tr>
             <th scope="row">16:00</th>
             <td colspan="2"><form>
-              <input class= "textarea" id="4pm" />
+              <input class= "description4pm" id="4pm" />
             </form></td>
             <td colspan="1"><button id="btn4pm" class="saveBtn"></button></td>
           </tr>
@@ -131,7 +130,7 @@
           <tr>
             <th scope="row">17:00</th>
             <td colspan="2"><form>
-              <input class= "textarea" id="5pm" />
+              <input class= "description5pm" id="5pm" />
             </form></td>
             <td colspan="1"><button id="btn5pm" class="saveBtn"></button></td>
           </tr>
@@ -140,6 +139,7 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   </body>
 </html>
