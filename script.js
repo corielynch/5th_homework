@@ -16,57 +16,122 @@ $(document).ready(function () {
     });
 
         $("#btn12pm").on("click", function () {
-        var value = $(".description").val();
+        var value = $(".description12pm").val();
         localStorage.setItem("#btn12pm", value);
     });
         
         $("#btn1pm").on("click", function () {
-        var value = $(".description").val();
+        var value = $(".description1pm").val();
         localStorage.setItem("#btn1pm", value);
     });
         
         $("#btn2pm").on("click", function () {
-        var value = $(".description").val();
+        var value = $(".description2pm").val();
         localStorage.setItem("#btn2pm", value);
     });
 
         $("#btn3pm").on("click", function () {
-        var value = $(".description").val();
+        var value = $(".description3pm").val();
         localStorage.setItem("#btn3pm", value);
     });
 
         $("#btn4pm").on("click", function () {
-        var value = $(".description").val();
+        var value = $(".description4pm").val();
         localStorage.setItem("#btn4pm", value);
     });
 
         $("#btn5pm").on("click", function () {
-        var value = $(".description").val();
+        var value = $(".description5pm").val();
         localStorage.setItem("#btn5pm", value);
     });
 
 //Function for the past, present, future
     function hourUpdate() {
-        var currentDay = moment().format('h');
-        var hour9 = parseInt("9");
-        var hour10 = parseInt("10");
-        var hour11 = parseInt("11");
-        var hour12 = parseInt("12");
-        var hour13 = parseInt("13");
-        var hour14 = parseInt("14");
-        var hour15 = parseInt("15");
-        var hour16 = parseInt("16");
-        var hour17 = parseInt("17");
+        var currentDay = moment().hours();
+        
+        var hour9 = parseInt($(".description9am"));
+        var hour10 = parseInt($(".description10am"));
+        var hour11 = parseInt($(".description11am"));
+        var hour12 = parseInt($(".description12pm"));
+        var hour13 = parseInt($(".description1pm"));
+        var hour14 = parseInt($(".description2pm"));
+        var hour15 = parseInt($(".description3pm"));
+        var hour16 = parseInt($(".description4pm"));
+        var hour17 = parseInt($(".description5pm"));       
 
-//Function for the past, present, future
-        if (currentDay < "#9am") {
+//If, else statements for the past, present, future
+        if (hour9 < currentDay) {
             $(this).addClass("past");
-        } else if (hours > currentDay) {
+        } else if (hour9 > currentDay) {
             $(this).addClass("future");
         } else {
             $(this).addClass("present");
         }
-    };
+
+        if (hour10 < currentDay) {
+            $(this).addClass("past");
+        } else if (hour10 > currentDay) {
+            $(this).addClass("future");
+        } else {
+            $(this).addClass("present");
+        }
+
+        if (hour11 < currentDay) {
+            $(this).addClass("past");
+        } else if (hour11 > currentDay) {
+            $(this).addClass("future");
+        } else {
+            $(this).addClass("present");
+        }
+        
+        if (hour12 < currentDay) {
+            $(this).addClass("past");
+        } else if (hour12 > currentDay) {
+            $(this).addClass("future");
+        } else {
+            $(this).addClass("present");
+        }
+
+        if (hour13 < currentDay) {
+            $(this).addClass("past");
+        } else if (hour13 > currentDay) {
+            $(this).addClass("future");
+        } else {
+            $(this).addClass("present");
+        }
+
+        if (hour14 < currentDay) {
+            $(this).addClass("past");
+        } else if (hour14 > currentDay) {
+            $(this).addClass("future");
+        } else {
+            $(this).addClass("present");
+        }
+
+        if (hour15 < currentDay) {
+            $(this).addClass("past");
+        } else if (hour15 > currentDay) {
+            $(this).addClass("future");
+        } else {
+            $(this).addClass("present");
+        }
+
+        if (hour16 < currentDay) {
+            $(this).addClass("past");
+        } else if (hour16 > currentDay) {
+            $(this).addClass("future");
+        } else {
+            $(this).addClass("present");
+        }
+
+        if (hour17 < currentDay) {
+            $(this).addClass("past");
+        } else if (hour17 > currentDay) {
+            $(this).addClass("future");
+        } else {
+            $(this).addClass("present");
+        }
+};
     hourUpdate();
 
 //Saves input info to local storage
