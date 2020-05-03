@@ -1,4 +1,4 @@
-
+//Function for on clicks of each time block
 $(document).ready(function () {
     $("#btn9am").on("click", function () {
         var value = $(".description9am").val();
@@ -45,34 +45,31 @@ $(document).ready(function () {
         localStorage.setItem("#btn5pm", value);
     });
 
-    //Function for the past, present, future
-    // function hourUpdate() {
-    //     var currentDay = moment().format('h');
-    //     console.log(currentDay);
-    //     $('#currentDay').append(currentDay);
+//Function for the past, present, future
+    function hourUpdate() {
+        var currentDay = moment().format('h');
+        var hour9 = parseInt("9");
+        var hour10 = parseInt("10");
+        var hour11 = parseInt("11");
+        var hour12 = parseInt("12");
+        var hour13 = parseInt("13");
+        var hour14 = parseInt("14");
+        var hour15 = parseInt("15");
+        var hour16 = parseInt("16");
+        var hour17 = parseInt("17");
 
-    //     var hours = 
+//Function for the past, present, future
+        if (currentDay < "#9am") {
+            $(this).addClass("past");
+        } else if (hours > currentDay) {
+            $(this).addClass("future");
+        } else {
+            $(this).addClass("present");
+        }
+    };
+    hourUpdate();
 
-    //     if (currentDay < 9am) {
-    //         $(this).addClass("past");
-    //     } else if (hours > currentDay) {
-    //         $(this).addClass("future");
-    //     } else {
-    //         $(this).addClass("present");
-    //     }
-    // };
-    // hourUpdate();
-
-    // localStorage.getItem("#btn9am", value);
-    // localStorage.getItem("#btn10am", value);
-    // localStorage.getItem("#btn11am", value);
-    // localStorage.setItem("#btn12pm", value);
-    // localStorage.setItem("#btn1pm", value);
-    // localStorage.setItem("#btn2pm", value);
-    // localStorage.setItem("#btn3pm", value);
-    // localStorage.setItem("#btn4pm", value);
-    // localStorage.setItem("#btn5pm", value);
-
+//Saves input info to local storage
     $(".description9am").val(localStorage.getItem("#btn9am"));
     $(".description10am").val(localStorage.getItem("#btn10am"));
     $(".description11am").val(localStorage.getItem("#btn11am"));
