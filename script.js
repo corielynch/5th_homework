@@ -48,88 +48,98 @@ $(document).ready(function () {
 //Function for the past, present, future
     function hourUpdate() {
         var currentDay = moment().hours();
-        
-        var hour9 = parseInt($(".description9am"));
-        var hour10 = parseInt($(".description10am"));
-        var hour11 = parseInt($(".description11am"));
-        var hour12 = parseInt($(".description12pm"));
-        var hour13 = parseInt($(".description1pm"));
-        var hour14 = parseInt($(".description2pm"));
-        var hour15 = parseInt($(".description3pm"));
-        var hour16 = parseInt($(".description4pm"));
-        var hour17 = parseInt($(".description5pm"));       
 
+//Sets hour blocks equal to an integer
+        var hour9 = $(".description9am");
+        hour9 = 9;
+        var hour10 = $(".description10am");
+        hour10 = 10;
+        var hour11 = $(".description11am");
+        hour11 = 11;
+        var hour12 = $(".description12pm");
+        hour12 = 12;
+        var hour13 = $(".description1pm");
+        hour13 = 13;
+        var hour14 = $(".description2pm");
+        hour14 = 14;
+        var hour15 = $(".description3pm");
+        hour15 = 15;
+        var hour16 = $(".description4pm");
+        hour16 = 16;
+        var hour17 = $(".description5pm");
+        hour17 = 17;
+              
 //If, else statements for the past, present, future
         if (hour9 < currentDay) {
-            $(this).addClass("past");
+            $(".description9am").addClass("past");
         } else if (hour9 > currentDay) {
-            $(this).addClass("future");
+            $(".description9am").addClass("future");
         } else {
-            $(this).addClass("present");
+            $(".description9am").addClass("present");
         }
 
         if (hour10 < currentDay) {
-            $(this).addClass("past");
+            $(".description10am").addClass("past");
         } else if (hour10 > currentDay) {
-            $(this).addClass("future");
+            $(".description10am").addClass("future");
         } else {
-            $(this).addClass("present");
+            $(".description10am").addClass("present");
         }
 
         if (hour11 < currentDay) {
-            $(this).addClass("past");
+            $(".description11am").addClass("past");
         } else if (hour11 > currentDay) {
-            $(this).addClass("future");
+            $(".description11am").addClass("future");
         } else {
-            $(this).addClass("present");
+            $(".description11am").addClass("present");
         }
         
         if (hour12 < currentDay) {
-            $(this).addClass("past");
+            $(".description12pm").addClass("past");
         } else if (hour12 > currentDay) {
-            $(this).addClass("future");
+            $(".description12pm").addClass("future");
         } else {
-            $(this).addClass("present");
+            $(".description12pm").addClass("present");
         }
 
         if (hour13 < currentDay) {
-            $(this).addClass("past");
+            $(".description1pm").addClass("past");
         } else if (hour13 > currentDay) {
-            $(this).addClass("future");
+            $(".description1pm").addClass("future");
         } else {
-            $(this).addClass("present");
+            $(".description1pm").addClass("present");
         }
 
         if (hour14 < currentDay) {
-            $(this).addClass("past");
+            $(".description2pm").addClass("past");
         } else if (hour14 > currentDay) {
-            $(this).addClass("future");
+            $(".description2pm").addClass("future");
         } else {
-            $(this).addClass("present");
+            $(".description2pm").addClass("present");
         }
 
         if (hour15 < currentDay) {
-            $(this).addClass("past");
+            $(".description3pm").addClass("past");
         } else if (hour15 > currentDay) {
-            $(this).addClass("future");
+            $(".description3pm").addClass("future");
         } else {
-            $(this).addClass("present");
+            $(".description3pm").addClass("present");
         }
 
         if (hour16 < currentDay) {
-            $(this).addClass("past");
+            $(".description4pm").addClass("past");
         } else if (hour16 > currentDay) {
-            $(this).addClass("future");
+            $(".description4pm").addClass("future");
         } else {
-            $(this).addClass("present");
+            $(".description4pm").addClass("present");
         }
 
         if (hour17 < currentDay) {
-            $(this).addClass("past");
+            $(".description5pm").addClass("past");
         } else if (hour17 > currentDay) {
-            $(this).addClass("future");
+            $(".description5pm").addClass("future");
         } else {
-            $(this).addClass("present");
+            $(".description5pm").addClass("present");
         }
 };
     hourUpdate();
